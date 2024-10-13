@@ -1,0 +1,13 @@
+type Bike = 
+ record {
+   description: text;
+   id: nat;
+   name: text;
+   price: nat;
+   stock: nat;
+ };
+service : {
+  addBike: (text, nat, text, nat) -> (nat);
+  getAllBikes: () -> (vec Bike) query;
+  purchaseBike: (nat) -> (bool);
+}
